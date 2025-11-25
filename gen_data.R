@@ -167,7 +167,7 @@ for(i in 1:length(dist.Gtype)){
     save_dir <- paste0(save_main_dir,graph,"_")
     for(p_idx in 1:length(dist.p)){
         P <- as.integer(dist.p[p_idx])
-        G <- generator(N = n, P = P, g = graph, ss=nt)
+        G <- generator(N = n, P = P, g = graph, ss=nt, dist_type=dist_type)
         save_dir_p = paste0(save_dir, P, "_", nt, ".rds")
         cat("Saving dist for ", graph, " with dim = ", P, "in ", save_dir_p, "............")
         saveRDS(G, file = save_dir_p)
